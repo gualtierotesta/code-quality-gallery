@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>it.gualtierotesta</groupId>
+    <artifactId>CodeQualityGallery</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <description>Sample project to show Java code quality  tools in action</description>
+    <name>CodeQualityGallery</name>
+
+    <developers>
+        <developer>
+            <id>gualtiero</id>
+            <name>Gualtiero Testa</name>
+            <email>gualtiero.testa@gmail.com</email>
+            <organization>Gualtiero Testa</organization>
+            <organizationUrl>http://www.gualtierotesta.it</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <properties>
+        <jdk.source>1.7</jdk.source>
+        <jdk.target>1.7</jdk.target>
+        <java.version>1.7</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>${jdk.source}</maven.compiler.source>
+        <maven.compiler.target>${jdk.target}</maven.compiler.target>
+    </properties>
+
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <pluginList>qc/fb-contrib-6.2.0.jar, qc/findsecbugs-plugin-1.4.1.jar</pluginList>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.4</version>
+                <configuration>
+                    <targetJdk>${jdk.target}</targetJdk>
+                    <rulesets>
+                        <ruleset>qc/pmd_rules.xml</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+                </configuration>
+            </plugin>
+
+            <!--FINDBUGS-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <!--<debug>true</debug>-->
+                    <effort>Max</effort>
+                    <pluginList>qc/fb-contrib-6.2.0.jar, qc/findsecbugs-plugin-1.4.1.jar</pluginList>
+                    <threshold>Low</threshold>
+                    <excludeFilterFile>qc/findbugs-exclude.xml</excludeFilterFile>
+                    <!--<includeFilterFile>findbugs-include.xml</includeFilterFile>                -->
+                </configuration>
+            </plugin>
+
+            <!--PMD-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.4</version>
+                <reportSets>
+                    <reportSet>
+                        <reports>
+                            <report>pmd</report>
+                            <!--<report>cpd</report>-->
+                        </reports>
+                    </reportSet>
+                </reportSets>
+                <configuration>
+                    <targetJdk>${jdk.target}</targetJdk>
+                    <rulesets>
+                        <ruleset>qc/pmd_rules.xml</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+
+
+</project>
