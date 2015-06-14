@@ -16,8 +16,9 @@
 package it.gualtierotesta.codequalitygallery;
 
 /**
+ * Sample class to let FindBugs find something
  *
- * @author Gualtiero Testa <www.gualtierotesta.it>
+ * @author Gualtiero Testa www.gualtierotesta.it
  */
 public class Sample {
 
