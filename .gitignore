@@ -1,12 +1,42 @@
-target
+### GENERAL
+*~
 *.class
-nb*.xml
-.idea
-*.iml
-
-# Package Files #
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+*.ctxt
 hs_err_pid*
+*.log
+.mtj.tmp/
+*.rar
+*.tar.gz
+*.zip
+
+### MAVEN
+target
+
+### GRADLE
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### ECLIPSE ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
