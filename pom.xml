@@ -74,7 +74,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.4</version>
+                <version>3.12.0</version>
                 <configuration>
                     <targetJdk>${jdk.target}</targetJdk>
                     <rulesets>
@@ -130,7 +130,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.4</version>
+                <version>3.12.0</version>
                 <reportSets>
                     <reportSet>
                         <reports>
