@@ -65,7 +65,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.0.5</version>
                 <configuration>
                     <pluginList>qc/fb-contrib-6.2.0.jar, qc/findsecbugs-plugin-1.4.1.jar</pluginList>
                 </configuration>
@@ -115,7 +115,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.0.5</version>
                 <configuration>
                     <!--<debug>true</debug>-->
                     <effort>Max</effort>
