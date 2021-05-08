@@ -4,7 +4,7 @@
 
     <groupId>it.gualtierotesta</groupId>
     <artifactId>CodeQualityGallery</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1</version>
     <packaging>jar</packaging>
     <description>Sample project to show Java code quality tools in action</description>
     <name>CodeQualityGallery</name>
@@ -19,7 +19,7 @@
 
     <organization>
         <name>Gualtiero Testa</name>
-        <url>http://www.gualtierotesta.it</url>
+        <url>http://gualtierotesta.wordpress.com</url>
     </organization>
 
     <issueManagement>
@@ -33,21 +33,6 @@
         <developerConnection>scm:git:git@github.com:gualtierotesta/code-quality-gallery.git</developerConnection>
       <tag>v1.1.0</tag>
   </scm>
-
-    <developers>
-        <developer>
-            <id>gualtiero</id>
-            <name>Gualtiero Testa</name>
-            <email>gualtiero.testa@gmail.com</email>
-            <organization>Gualtiero Testa</organization>
-            <organizationUrl>http://www.gualtierotesta.it</organizationUrl>
-            <roles>
-                <role>architect</role>
-                <role>developer</role>
-            </roles>
-        </developer>
-    </developers>
-
 
     <properties>
         <jdk.source>1.7</jdk.source>
@@ -100,7 +85,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.1.1</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
